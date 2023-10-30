@@ -9,7 +9,7 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full ">
           <img src={img1} className="w-full rounded-xl" />
           <div
-            className="absolute h-full flex items-center
+            className="absolute rounded-xl h-full flex items-center
           bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] "
           >
             <div className="text-white space-y-7 w-1/3 ml-20">
@@ -46,7 +46,7 @@ const Banner = () => {
         <div id="slide2" className="carousel-item relative w-full">
           <img src={img2} className="w-full rounded-xl" />
           <div
-            className="absolute h-full flex items-center
+            className="absolute rounded-xl h-full flex items-center
           bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] "
           >
             <div className="text-white space-y-7 w-1/3 ml-20">
@@ -63,9 +63,9 @@ const Banner = () => {
                 </button>
                 <button className="btn btn-outline border-white text-white">
                   Latest Project
-                </button>
-              </div>
-            </div>
+ </button>
+              </div> 
+            </div> 
           </div>
           <div className="absolute flex justify-end transform -translate-y-1/2 left-5  right-5  bottom-0">
             <a href="#slide1" className="btn btn-circle mr-5">
@@ -83,7 +83,7 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full">
           <img src={img3} className="w-full rounded-xl" />
           <div
-            className="absolute h-full flex items-center
+            className="absolute  rounded-xl h-full flex items-center
           bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] "
           >
             <div className="text-white space-y-7 w-1/3 ml-20">
@@ -120,7 +120,7 @@ const Banner = () => {
         <div id="slide4" className="carousel-item relative w-full">
           <img src={img4} className="w-full rounded-xl" />
           <div
-            className="absolute h-full flex items-center
+            className="absolute h-full rounded-xl flex items-center
           bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] "
           >
             <div className="text-white space-y-7 w-1/3 ml-20">
@@ -153,7 +153,6 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        
       </div>
     );
 };
