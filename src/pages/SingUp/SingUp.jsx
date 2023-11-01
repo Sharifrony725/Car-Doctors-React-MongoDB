@@ -1,7 +1,29 @@
-import login from "../../../src/assets/images/login/login.svg";
+import { useContext } from "react";
 import { Link } from 'react-router-dom';
+import { AuthContext } from './../../providers/AuthProvider';
+import login from "../../../src/assets/images/login/login.svg";
 
 const SingUp = () => {
+
+  const { createUser } = useContext(AuthContext);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name,email,password);
+    createUser(email, password)
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+    })
+    .then(error => {
+      console.log(error);
+    })
+
+  }
   return (
     <div className="hero bg-white mb-5">
       <div className="hero-content flex-col lg:flex-row">
@@ -11,7 +33,7 @@ const SingUp = () => {
           </p>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm  bg-white border border-[#D0D0D0] ml-7">
-          <form className="card-body">
+          <form className="card-body" onSubmit={handleSubmit}>
             <h1 className="text-4xl font-semibold my-5 text-center">Sign UP</h1>
             <div className="form-control">
               <label className="label">

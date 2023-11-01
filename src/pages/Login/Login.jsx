@@ -1,9 +1,24 @@
+import { useContext } from 'react';
 import login from '../../../src/assets/images/login/login.svg'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 const Login = () => {
+
+    const { signIn } = useContext(AuthContext);
+
     const handleLogin = e => {
         e.preventDefault();
-        // const form = 
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        signIn(email, password)
+          .then((result) => {
+            const user = result.user;
+            console.log(user);
+          })
+          .then((error) => {
+            console.log(error);
+          });
     }
     return (
       <div className="hero bg-white mb-5">
